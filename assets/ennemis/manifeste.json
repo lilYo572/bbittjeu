@@ -1,0 +1,27 @@
+{
+  "Serra-Boost": {
+    "fichier": "Serra-Boost.png",
+    "w": 33,
+    "h": 40
+  },
+  "Serra-Lanceur": {
+    "fichier": "Serra-Lanceur.png",
+    "w": 39,
+    "h": 42
+  },
+  "Serra-Lourd": {
+    "fichier": "Serra-Lourd.png",
+    "w": 46,
+    "h": 50
+  },
+  "Serra-Volant": {
+    "fichier": "Serra-Volant.png",
+    "w": 38,
+    "h": 38
+  },
+  "Serra": {
+    "fichier": "Serra.png",
+    "w": 30,
+    "h": 40
+  }
+}
