@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Brad Bitt, mais le jeu — Prototype 03</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="scene">
+  <canvas id="jeu" width="640" height="360"></canvas>
+
+  <!-- Commandes tactiles, affichees uniquement sur appareil tactile -->
+  <div id="tactile" hidden>
+    <div class="pad">
+      <button class="tbtn" data-touche="gauche" aria-label="Gauche">◀</button>
+      <button class="tbtn" data-touche="droite" aria-label="Droite">▶</button>
+    </div>
+    <div class="pad droite">
+      <button class="tbtn" data-touche="onde" aria-label="Brad-Shy">✹</button>
+      <button class="tbtn" data-touche="attaque" aria-label="Frapper">✊</button>
+      <button class="tbtn saut" data-touche="saut" aria-label="Sauter">▲</button>
+    </div>
+  </div>
+</div>
+
+<button id="ouvrir-reglages" title="Réglages (F1)">⚙ Réglages</button>
+
+<aside id="reglages" hidden>
+  <header>
+    <h1>Réglages</h1>
+    <button id="fermer-reglages" aria-label="Fermer">✕</button>
+  </header>
+
+  <p class="aide">
+    Modifie les valeurs pendant que tu joues. Elles sont mémorisées dans ce
+    navigateur.
+  </p>
+
+  <div id="curseurs"></div>
+
+  <section class="actions">
+    <button id="reinit">Valeurs par défaut</button>
+    <button id="exporter">Copier le réglage</button>
+  </section>
+  <section class="actions">
+    <button id="relancer">Relancer le niveau</button>
+  </section>
+
+  <section class="bascules">
+    <label><input type="checkbox" id="opt-double-saut"> Double saut (débloquable plus tard)</label>
+    <label><input type="checkbox" id="opt-hitbox"> Afficher les boîtes de collision</label>
+    <label><input type="checkbox" id="opt-traces"> Afficher la trace de saut</label>
+  </section>
+
+  <section class="aide">
+    <strong>Commandes</strong><br>
+    Déplacement : ← → &nbsp;/&nbsp; A D &nbsp;/&nbsp; Q D<br>
+    Saut : Espace &nbsp;/&nbsp; ↑ &nbsp;/&nbsp; W &nbsp;/&nbsp; Z (maintenir = plus haut)<br>
+    Courir : Maj &nbsp;·&nbsp; Frapper / lancer : X &nbsp;·&nbsp; Brad-Shy : C<br>
+    Retour au début : R &nbsp;·&nbsp; Réglages : F1<br>
+    <em>Une chute te remet au dernier sol stable, pas au début.</em>
+  </section>
+</aside>
+
+<script src="js/reglages.js"></script>
+<script src="js/monde.js"></script>
+<script src="js/acteurs.js"></script>
+<script src="js/entrees.js"></script>
+<script src="js/jeu.js"></script>
+</body>
+</html>
